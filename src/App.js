@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import ContactList from './components/ContactList';
+import Header from './components/Header';
 import './App.css';
+const App = () => {
+  const [contact,addContact] = useState([]);
 
-function App() {
+  const addContactHandler = (newContact) =>{
+    addContact([...contact,{id : uuidv4(),...newContact}]);
+  }
+  const removeContactHandler = (id) =>{
+    const newContact = contact.filter(contact => contact.id!== id);
+    addContact(newContact)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h3>Contacts List</h3>
+      <Header addContactHandler = {addContactHandler}/>
+      <ContactList contact = {contact} removeContactHandler = {removeContactHandler}/>
     </div>
   );
 }

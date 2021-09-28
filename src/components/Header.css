@@ -1,0 +1,25 @@
+*{
+   font-size: 18px;
+   transition: 0.3s all;
+   box-sizing: border-box;
+}
+.input-wrapper{
+   margin-bottom: 1rem;
+}
+.input-wrapper > label{
+   margin-right: 2rem;
+}
+.input-wrapper input{
+   padding: 0.3rem 1rem;
+}
+
+button{
+   padding: .4rem 1.6rem;
+   background-color: #EDF11D;
+   border: none;
+   appearance: none;
+}
+button:hover{
+   padding-right: 4rem;
+   background-color: #5AC00A;
+}

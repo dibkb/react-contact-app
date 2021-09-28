@@ -1,0 +1,28 @@
+.contact-item-container{
+   padding: 1rem 2rem;
+   border: .4px solid #F9FE08;
+   margin: 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.contact-item{
+   display: flex;
+   flex-direction: column;
+}
+.contact-item-name{
+   font-size: 24px;
+   font-weight: 500;
+   margin-bottom: .4rem;
+   color: #fff;
+}
+.contact-item-email{
+   color: #A7A7A7;
+}
+.delete-btn{
+   background-color: #CB1C11;
+   color: #fff;
+}
+.delete-btn:hover{
+   background-color: #A90A00;
+}
